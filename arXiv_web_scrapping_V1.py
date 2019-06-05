@@ -3,11 +3,12 @@ import requests
 import csv
 import pandas
 
-# year = '15'
+
 skip_list = ['0','2000','4000']
 
 category = 'gr-qc'
 
+#set the year according to the requirement
 start_year = 10
 end_year = 15 
 
@@ -39,12 +40,8 @@ for year_number in range(start_year,end_year):
 
 		'''poinitng at the dl tag which contains the list of all the papers'''
 		content=body.find('dl')
-		# print(content.prettify)
-
-		# title = content.find('div',class_='list-title mathjax')
-		# print(title.text)
-		# article_title =title.text.split(':')
-		# csv_writer.writerow([article_title[0]])
+		
+		
 
 
 		'''extracting the titles from each row within the dl tag where the title is 
